@@ -6,28 +6,28 @@
         jumboMode="false"
         revision="23.0.2"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_250e1f4527c57728e99f7d85e14ec8c9acfda447.jar" />
+        <dex dex="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_250e1f4527c57728e99f7d85e14ec8c9acfda447.jar" />
     </item>
     <item
-        jar="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jar="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_54a8f0bcceb93843d0a0454a3188086da98e99f1.jar" />
+        <dex dex="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_1f8e192c1973f984fcf3b6edabbdcbbcfd711002.jar" />
     </item>
     <item
-        jar="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jar="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_48a4b154c22692b39de3ec9a0f3ebfb07d27f998.jar" />
+        <dex dex="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_43997cd164bdfb1d33e0daa70523b93257e5bf35.jar" />
     </item>
     <item
-        jar="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jar="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="E:\Austin\Documents\School\Android\Project4\P5_CraigsList_Skeleton(1)\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_b9c1ddbc9d22993ccd11f80f41fc8d1124eec0b6.jar" />
+        <dex dex="E:\Austin\Documents\School\Android\Project4\AndroidProject4\P5_CraigsList_Skeleton\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_b716d5fc9c546e4dfba003b36fe81c7246cf982c.jar" />
     </item>
 
 </items>

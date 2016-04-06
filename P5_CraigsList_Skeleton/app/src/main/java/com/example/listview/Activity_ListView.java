@@ -1,6 +1,9 @@
 package com.example.listview;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,11 +15,16 @@ public class Activity_ListView extends AppCompatActivity {
 
 
 	ListView my_listview;
+	SharedPreferences myPreference;
+	SharedPreferences.OnSharedPreferenceChangeListener listener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		myPreference = PreferenceManager.getDefaultSharedPreferences(this);
+		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
 
 		// Change title to indicate sort by
 		setTitle("Sort by:");
@@ -73,11 +81,16 @@ public class Activity_ListView extends AppCompatActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
+		int id = item.getItemId();
 
-		default:
-			break;
+		switch (id) {
+			case R.id.action_settings:
+				Intent myIntent = new Intent(this, activityPreference.class);
+				startActivity(myIntent);
+				return true;
 		}
-		return true;
+
+		//all else fails let super handle it
+		return super.onOptionsItemSelected(item);
 	}
 }

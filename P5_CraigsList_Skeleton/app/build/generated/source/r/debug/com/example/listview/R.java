@@ -1810,6 +1810,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0005;
         public static final int progress_horizontal=0x7f0d0006;
         public static final int radio=0x7f0d003b;
+        public static final int reset=0x7f0d0065;
         public static final int screen=0x7f0d0014;
         public static final int scrollIndicatorDown=0x7f0d0035;
         public static final int scrollIndicatorUp=0x7f0d0032;

@@ -12,6 +12,14 @@ public class BikeData {
     public static final int LOCATION = 3;
 
     //TODO make all BikeData fields final
+    final String Company;
+    final String Model;
+    final Double Price;
+    final String Description;
+    final String Location;
+    final String Date;
+    final String Picture;
+    final String Link;
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
@@ -19,11 +27,20 @@ public class BikeData {
     @Override
     public String toString() {
         // TODO figure out how to print all bikedata out for dialogs
-        return "TODO";
+
+        return this.Company+":"+this.Model+":"+this.Price+":"+this.Description+":"+this.Location+":"+this.Date+":"+this.Picture+":"+this.Link;
     }
 
     private BikeData(Builder b) {
-        //TODO
+        this.Company = b.Company;
+        this.Model = b.Model;
+        this.Price = b.Price;
+        this.Description = b.Description;
+        this.Location = b.Location;
+        this.Date = b.Date;
+        this.Picture = b.Picture;
+        this.Link = b.Link;
+
     }
 
     /**
@@ -50,30 +67,31 @@ public class BikeData {
         }
 
         // the following are setters
-        // notice it returns this bulder
+        // notice it returns this builder
         // makes it suitable for chaining
         Builder setDescription(String Description) {
             //TODO manage this
+            this.Description = Description;
             return this;
         }
 
         Builder setLocation(String Location) {
-
+            this.Location = Location;
             return this;
         }
 
         Builder setDate(String Date) {
-
+            this.Date = Date;
             return this;
         }
 
         Builder setPicture(String Picture) {
-
+            this.Picture = Picture;
             return this;
         }
 
         Builder setLink(String Link) {
-
+            this.Link = Link;
             return this;
         }
 

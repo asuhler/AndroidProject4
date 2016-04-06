@@ -654,6 +654,7 @@ int id parentPanel 0x7f0d002d
 int id progress_circular 0x7f0d0005
 int id progress_horizontal 0x7f0d0006
 int id radio 0x7f0d003b
+int id reset 0x7f0d0065
 int id screen 0x7f0d0014
 int id scrollIndicatorDown 0x7f0d0035
 int id scrollIndicatorUp 0x7f0d0032

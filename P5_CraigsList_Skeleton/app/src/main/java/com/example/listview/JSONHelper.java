@@ -28,7 +28,7 @@ public class JSONHelper {
     private static final String PICTURE = "Picture";
     private static final String LINK = "Link";
 
-    private JSONHelper() {
+    public JSONHelper() {
     }
 
     /**
@@ -67,6 +67,7 @@ public class JSONHelper {
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block
+            Log.e("LOG", e.toString());
             e.printStackTrace();
         }
         return myList;

@@ -19,6 +19,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
     private static final String TAG = "DownloadTask";
     private static final int BUFFER_SIZE = 8096;
     Activity_ListView myActivity;
+    private String JSON = "";
 
     // 1 second
     private static final int TIMEOUT = 1000;
@@ -102,6 +103,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
                 while ((myData = in.readLine()) != null) {
                     sb.append(myData);
                 }
+                JSON = sb.toString();
                 return sb.toString();
 
             } finally {
@@ -117,6 +119,9 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
+        if(JSON!="") {
+            myActivity.parseJSON(JSON);
+        }
         //TODO Your Stuff Here
     }
 

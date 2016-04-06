@@ -2,6 +2,7 @@ package com.example.listview;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -108,11 +109,17 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
 
             } finally {
                 // close resource no matter what exception occurs
-                in.close();
+                if(in!=null) {
+                    in.close();
+                }
                 connection.disconnect();
             }
         } catch (Exception exc) {
             exc.printStackTrace();
+            //Log.e("LOG", exc.getMessage());
+            //Added extra error reporting in the event server fails to return after timeout, CNU wifi hates me
+            //Returns the error with a : separated header on the front, parsed on return to JSON parsing in main
+            JSON = "ERR:" + exc.getMessage();
             return null;
         }
     }
@@ -122,7 +129,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
         if(JSON!="") {
             myActivity.parseJSON(JSON);
         }
-        //TODO Your Stuff Here
+
     }
 
     /*

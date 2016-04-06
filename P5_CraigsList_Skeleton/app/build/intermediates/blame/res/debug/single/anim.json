@@ -1,35 +1,71 @@
 [
     {
-        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
         "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
         "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
         "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -38,5 +74,9 @@
     {
         "merged": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
         "source": "E:\\Austin\\Documents\\School\\Android\\Project4\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
     }
 ]

@@ -19,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.app.ListActivity;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -30,6 +32,8 @@ public class Activity_ListView extends AppCompatActivity {
 	SharedPreferences.OnSharedPreferenceChangeListener listener;
     protected ArrayAdapter adapter;
     JSONHelper help;
+    public int SORT = 0;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -110,14 +114,58 @@ public class Activity_ListView extends AppCompatActivity {
      * @param in String input returned from DownloadTask. Contains all JSON from download.
      */
     public void parseJSON(String in){
-        Log.e("LOG", in);
+        //Log.e("LOG", in);
+        //Added extra error reporting in the event server fails to return after timeout, CNU wifi hates me
+        //Checks for the header on the front of the string, if the header is ERR, then reports the error received
+        //in a LONG toast message to the user.
+        //Additionally, will return any error within the try catch block.
+        if(in.split(":")[0].equals("ERR")){
+            Toast.makeText(Activity_ListView.this, "Error: " + in.split(":")[1], Toast.LENGTH_LONG).show();
+            return;
+        }
         help = new JSONHelper();
         List<BikeData> data = help.parseAll(in);
+
+        switch(SORT){
+            case 0:
+                Collections.sort(data, new companyComparator());
+                Log.e("CASE", "SORT = Company");
+                for(int i=0; i<data.size(); i++){
+                    Log.e("LOG", data.get(i).Company);
+                }
+                return;
+
+            case 1:
+                Collections.sort(data, new modelComparator());
+                Log.e("CASE", "SORT = Model");
+                for(int i=0; i<data.size(); i++){
+                    Log.e("LOG", data.get(i).Model);
+                }
+                return;
+
+            case 2:
+                Collections.sort(data, new priceComparator());
+                Log.e("CASE", "SORT = Price");
+                for(int i=0; i<data.size(); i++){
+                    Log.e("LOG", data.get(i).Price.toString());
+                }
+                return;
+
+            case 3:
+                Collections.sort(data, new locationComparator());
+                Log.e("CASE", "SORT = Location");
+                for(int i=0; i<data.size(); i++){
+                    Log.e("LOG", data.get(i).Location);
+                }
+
+        }
+
         /*for(int i=0; i<data.size(); i++){
             Log.e("LOG", data.get(i).toString());
         }*/
 
     }
+
 
 	private void setupListViewOnClickListener() {
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
@@ -157,19 +205,13 @@ public class Activity_ListView extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int pos, long rowid) {
                 //Toast.makeText(Activity_ListView.this, "pos: " + pos, Toast.LENGTH_SHORT).show();
-                switch (pos) {
-                    case 0:
-                        //Toast.makeText(Activity_ListView.this, "THIS WORKED", Toast.LENGTH_SHORT).show();
-                    case 1:
-                        //Toast.makeText(Activity_ListView.this, "THIS WORKED TOO", Toast.LENGTH_SHORT).show();
-                    case 2:
-
-                    case 3:
-
-
-                }
+                Log.e("POS", Integer.toString(pos));
+                SORT = pos;
+                downloadJsonList();
 
             }
+
+
 
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
@@ -206,6 +248,75 @@ public class Activity_ListView extends AppCompatActivity {
 	}
 
     private void doReset() {
+        SORT=0;
         downloadJsonList();
     }
+
+    public class companyComparator implements Comparator<BikeData> {
+
+        @Override
+        public int compare(BikeData o1, BikeData o2) {
+            if(o1.Company.equals(o2.Company)){
+                return 0;
+            }
+            if(o1.Company.equals(null)){
+                return -1;
+            }
+            if(o2.Company.equals(null)){
+                return 1;
+            }
+            return o1.Company.compareTo(o2.Company);
+        }
+    };
+
+    public class modelComparator implements Comparator<BikeData> {
+
+        @Override
+        public int compare(BikeData o1, BikeData o2) {
+            if(o1.Model.equals(o2.Model)){
+                return 0;
+            }
+            if(o1.Model.equals(null)){
+                return -1;
+            }
+            if(o2.Model.equals(null)){
+                return 1;
+            }
+            return o1.Model.compareTo(o2.Model);
+        }
+    };
+
+    public class priceComparator implements Comparator<BikeData> {
+
+        @Override
+        public int compare(BikeData o1, BikeData o2) {
+            if(o1.Price==o2.Price){
+                return 0;
+            }
+            if(o1.Price.equals(null)){
+                return -1;
+            }
+            if(o2.Price.equals(null)){
+                return 1;
+            }
+            return (o1.Price>o2.Price ? -1 : (o1.Price==o2.Price ? 0 : 1));
+        }
+    };
+
+    public class locationComparator implements Comparator<BikeData> {
+
+        @Override
+        public int compare(BikeData o1, BikeData o2) {
+            if(o1.Location.equals(o2.Location)){
+                return 0;
+            }
+            if(o1.Location.equals(null)){
+                return -1;
+            }
+            if(o2.Location.equals(null)){
+                return 1;
+            }
+            return o1.Location.compareTo(o2.Location);
+        }
+    };
 }

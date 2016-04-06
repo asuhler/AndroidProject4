@@ -11,11 +11,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.app.ListActivity;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -44,6 +46,7 @@ public class Activity_ListView extends AppCompatActivity {
 
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
+
 
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -113,6 +116,7 @@ public class Activity_ListView extends AppCompatActivity {
         /*for(int i=0; i<data.size(); i++){
             Log.e("LOG", data.get(i).toString());
         }*/
+
     }
 
 	private void setupListViewOnClickListener() {

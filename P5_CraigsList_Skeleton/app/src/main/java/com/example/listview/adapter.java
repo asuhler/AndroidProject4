@@ -6,7 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * Created by Perkins on 10/28/2015.
@@ -79,7 +82,7 @@ public class adapter extends BaseAdapter {
             holder.url = values[position];
 
             //start a thread to download image
-            new DownloadImageTask("01", holder.img1).execute(holder.url);
+            new DownloadImageTask(holder.url, holder.img1).execute();
 
             return convertView;
         }

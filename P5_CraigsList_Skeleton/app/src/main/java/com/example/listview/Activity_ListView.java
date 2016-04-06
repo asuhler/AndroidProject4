@@ -1,6 +1,5 @@
 package com.example.listview;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,20 +10,18 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.app.ListActivity;
-
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
-public class Activity_ListView extends AppCompatActivity {
+
+
+public class Activity_ListView extends AppCompatActivity{
 
 
 	ListView my_listview;
@@ -33,11 +30,13 @@ public class Activity_ListView extends AppCompatActivity {
     protected ArrayAdapter adapter;
     JSONHelper help;
     public int SORT = 0;
+    private adapter LVAdapter;
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
 		myPreference = PreferenceManager.getDefaultSharedPreferences(this);
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
@@ -45,11 +44,17 @@ public class Activity_ListView extends AppCompatActivity {
 
 
 
+
+
+        my_listview = (ListView)findViewById(R.id.lv);
+
+
+
 		// Change title to indicate sort by
 		setTitle("Sort by:");
 
 		//listview that you will operate on
-		my_listview = (ListView)findViewById(R.id.lv);
+
 
 
 		//toolbar
@@ -63,6 +68,7 @@ public class Activity_ListView extends AppCompatActivity {
 		setupListViewOnClickListener();
 
         downloadJsonList();
+
 
 
         listener = new SharedPreferences.OnSharedPreferenceChangeListener() {

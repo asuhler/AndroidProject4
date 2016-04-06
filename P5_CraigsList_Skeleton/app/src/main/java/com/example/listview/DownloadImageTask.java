@@ -24,6 +24,10 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView imageView;
     private Drawable placeholder;
 
+
+    private String url;
+
+
     public DownloadImageTask(String pictureID, ImageView imageView) {
         this.pictureID = pictureID;
         this.imageView = imageView;
@@ -102,5 +106,6 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         //TODO Your Stuff Here
+
     }
 }

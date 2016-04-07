@@ -23,6 +23,7 @@ public class adapter extends BaseAdapter {
     //for layouts
     LayoutInflater myInflater;
     public List<BikeData> data = new ArrayList<BikeData>();
+    String serverAddress;
 
     //
     public static class ViewHolder {
@@ -42,12 +43,12 @@ public class adapter extends BaseAdapter {
 
     private final Activity_ListView mainActivity;
 
-    public adapter(Activity_ListView activity, List<BikeData> data) {
+    public adapter(Activity_ListView activity, List<BikeData> data, String serverAddress) {
         this.mainActivity = activity;
+        this.serverAddress = serverAddress;
         myInflater = (LayoutInflater) mainActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if(data!=null) {
             if(!data.isEmpty()){
-                Log.e("LOG","I made it into the data set transfer from construtor");
                 for(int i=0; i<data.size();i++) {
                     this.data.add(data.get(i));
                 }
@@ -59,7 +60,6 @@ public class adapter extends BaseAdapter {
     @Override
     public int getCount () {
         if(data!=null){
-            Log.e("ARRRGGG", "I got the actual number of values in data");
             return data.size();
         }
         return 0;
@@ -94,10 +94,10 @@ public class adapter extends BaseAdapter {
         holder.Model.setText(data.get(position).Model);
         holder.Description.setText(data.get(position).Description);
         holder.Price.setText(data.get(position).Price.toString());
-        holder.url = data.get(position).Picture;
+        holder.url = serverAddress+ data.get(position).Picture;
 
         //start a thread to download image
-        //new DownloadImageTask(holder.url, holder.img1).execute();
+        new DownloadImageTask(holder.url, holder.img1).execute();
 
         return convertView;
     }

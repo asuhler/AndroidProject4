@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
@@ -20,16 +21,23 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private static final int DEFAULTBUFFERSIZE = 50;
     private static final int NODATA = -1;
 
-    private String pictureID;
     private ImageView imageView;
     private Drawable placeholder;
+
+    public static class ViewHolder {
+        ImageView img1;
+        TextView Model;
+        TextView Description;
+        TextView Price;
+        String url;
+    }
 
 
     private String url;
 
 
-    public DownloadImageTask(String pictureID, ImageView imageView) {
-        this.pictureID = pictureID;
+    public DownloadImageTask(String url, ImageView imageView) {
+        this.url = url;
         this.imageView = imageView;
         Resources resources = imageView.getContext().getResources();
         this.placeholder = resources.getDrawable(R.drawable.generic);
@@ -44,7 +52,7 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     protected Bitmap doInBackground(String... params) {
 
         // site we want to connect to
-        String url = params[0];
+
 
         Log.d(TAG, "URL is " + url);
 
@@ -107,6 +115,14 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         //TODO Your Stuff Here
+        Log.d(TAG, "Result for " + url);
+        if (result != null) {
+                Log.d(TAG, "SUCCESS for " + url);
+                imageView.setImageBitmap(result);
+                //Log.d(TAG, "FAIL url != this.myVH.url for " + url);
+        } else
+            Log.d(TAG, "NULL for " + url);
+
 
     }
 }

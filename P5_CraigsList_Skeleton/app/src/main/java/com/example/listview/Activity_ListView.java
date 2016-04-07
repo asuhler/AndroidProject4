@@ -37,7 +37,7 @@ public class Activity_ListView extends AppCompatActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        LVAdapter = new adapter(this, null);
+        LVAdapter = new adapter(this, null, null);
 		setContentView(R.layout.activity_main);
 		myPreference = PreferenceManager.getDefaultSharedPreferences(this);
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
@@ -134,11 +134,12 @@ public class Activity_ListView extends AppCompatActivity{
         help = new JSONHelper();
         List<BikeData> data = help.parseAll(in);
 
-        adapter hello;
+
+
         switch(SORT){
             case 0:
                 Collections.sort(data, new companyComparator());
-                LVAdapter = new adapter(this, data);
+                LVAdapter = new adapter(this, data, myPreference.getString("PREF_SERVER",""));
                 my_listview.setAdapter(LVAdapter);
                 LVAdapter.notifyDataSetChanged();
 
@@ -146,7 +147,7 @@ public class Activity_ListView extends AppCompatActivity{
 
             case 1:
                 Collections.sort(data, new modelComparator());
-                LVAdapter = new adapter(this, data);
+                LVAdapter = new adapter(this, data, myPreference.getString("PREF_SERVER",""));
                 my_listview.setAdapter(LVAdapter);
                 LVAdapter.notifyDataSetChanged();
 
@@ -154,7 +155,7 @@ public class Activity_ListView extends AppCompatActivity{
 
             case 2:
                 Collections.sort(data, new priceComparator());
-                LVAdapter = new adapter(this, data);
+                LVAdapter = new adapter(this, data, myPreference.getString("PREF_SERVER",""));
                 my_listview.setAdapter(LVAdapter);
                 LVAdapter.notifyDataSetChanged();
 
@@ -162,7 +163,7 @@ public class Activity_ListView extends AppCompatActivity{
 
             case 3:
                 Collections.sort(data, new locationComparator());
-                LVAdapter = new adapter(this, data);
+                LVAdapter = new adapter(this, data, myPreference.getString("PREF_SERVER",""));
                 my_listview.setAdapter(LVAdapter);
                 LVAdapter.notifyDataSetChanged();
 
@@ -265,9 +266,11 @@ public class Activity_ListView extends AppCompatActivity{
 	}
 
     private void doReset() {
-        SORT=0;
+
         downloadJsonList();
         first = true;
+        setupSimpleSpinner();
+
     }
 
 

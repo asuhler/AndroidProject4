@@ -32,12 +32,12 @@
         "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
         "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "D:\\Users\\AUSTIN\\Documents\\AndroidProjects\\AndroidProject4\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",

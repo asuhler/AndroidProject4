@@ -1,5 +1,6 @@
 package com.example.listview;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -32,6 +35,7 @@ public class Activity_ListView extends AppCompatActivity{
     public int SORT = 0;
     private adapter LVAdapter;
     boolean first = true;
+    List<BikeData> data = new ArrayList<>();
 
 
 	@Override
@@ -132,7 +136,7 @@ public class Activity_ListView extends AppCompatActivity{
             return;
         }
         help = new JSONHelper();
-        List<BikeData> data = help.parseAll(in);
+        data = help.parseAll(in);
 
 
 
@@ -183,7 +187,20 @@ public class Activity_ListView extends AppCompatActivity{
 
 	private void setupListViewOnClickListener() {
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
-	}
+        my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapter, View v, int position,
+                                    long arg3)
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Activity_ListView.this);
+                builder.setTitle(data.get(position).Model);
+                builder.setMessage(data.get(position).toString());
+                builder.setPositiveButton("OK", null);
+                builder.create().show();
+
+            }
+
+        });
+    }
 
 	/**
 	 * Takes the string of bikes, parses it using JSONHelper

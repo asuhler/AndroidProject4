@@ -27,8 +27,15 @@ public class BikeData {
     @Override
     public String toString() {
         // TODO figure out how to print all bikedata out for dialogs
+        String out = "Company: " + this.Company + "\r\n" +
+                        "Model: " + this.Model + "\r\n" +
+                        "Price: " + this.Price + "\r\n" +
+                        "Location: " + this.Location + "\r\n" +
+                        "Date Listed: " + this.Date + "\r\n" +
+                        "Description: " + this.Description + "\r\n" +
+                        "Link: " + this.Link;
 
-        return this.Company+":"+this.Model+":"+this.Price+":"+this.Description+":"+this.Location+":"+this.Date+":"+this.Picture+":"+this.Link;
+        return out;
     }
 
     private BikeData(Builder b) {

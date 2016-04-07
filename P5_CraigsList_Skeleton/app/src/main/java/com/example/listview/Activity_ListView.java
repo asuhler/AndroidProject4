@@ -31,12 +31,13 @@ public class Activity_ListView extends AppCompatActivity{
     JSONHelper help;
     public int SORT = 0;
     private adapter LVAdapter;
+    boolean first = true;
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+        LVAdapter = new adapter(this, null);
 		setContentView(R.layout.activity_main);
 		myPreference = PreferenceManager.getDefaultSharedPreferences(this);
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
@@ -47,6 +48,7 @@ public class Activity_ListView extends AppCompatActivity{
 
 
         my_listview = (ListView)findViewById(R.id.lv);
+
 
 
 
@@ -98,7 +100,7 @@ public class Activity_ListView extends AppCompatActivity{
 
         ConnectivityCheck test = new ConnectivityCheck();
         if(test.isNetworkReachableAlertUserIfNot(this)){
-            Toast.makeText(Activity_ListView.this, "I have internet", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(Activity_ListView.this, "I have internet", Toast.LENGTH_SHORT).show();
             //download JSON
             String address = myPreference.getString("PREF_SERVER","") + "bikes.json";
             DownloadTask download = new DownloadTask(this);
@@ -132,43 +134,48 @@ public class Activity_ListView extends AppCompatActivity{
         help = new JSONHelper();
         List<BikeData> data = help.parseAll(in);
 
+        adapter hello;
         switch(SORT){
             case 0:
                 Collections.sort(data, new companyComparator());
-                Log.e("CASE", "SORT = Company");
-                for(int i=0; i<data.size(); i++){
-                    Log.e("LOG", data.get(i).Company);
-                }
+                LVAdapter = new adapter(this, data);
+                my_listview.setAdapter(LVAdapter);
+                LVAdapter.notifyDataSetChanged();
+
                 return;
 
             case 1:
                 Collections.sort(data, new modelComparator());
-                Log.e("CASE", "SORT = Model");
-                for(int i=0; i<data.size(); i++){
-                    Log.e("LOG", data.get(i).Model);
-                }
+                LVAdapter = new adapter(this, data);
+                my_listview.setAdapter(LVAdapter);
+                LVAdapter.notifyDataSetChanged();
+
                 return;
 
             case 2:
                 Collections.sort(data, new priceComparator());
-                Log.e("CASE", "SORT = Price");
-                for(int i=0; i<data.size(); i++){
-                    Log.e("LOG", data.get(i).Price.toString());
-                }
+                LVAdapter = new adapter(this, data);
+                my_listview.setAdapter(LVAdapter);
+                LVAdapter.notifyDataSetChanged();
+
                 return;
 
             case 3:
                 Collections.sort(data, new locationComparator());
-                Log.e("CASE", "SORT = Location");
-                for(int i=0; i<data.size(); i++){
-                    Log.e("LOG", data.get(i).Location);
-                }
+                LVAdapter = new adapter(this, data);
+                my_listview.setAdapter(LVAdapter);
+                LVAdapter.notifyDataSetChanged();
+
+
+
 
         }
 
-        /*for(int i=0; i<data.size(); i++){
-            Log.e("LOG", data.get(i).toString());
-        }*/
+
+
+
+        
+
 
     }
 
@@ -210,10 +217,14 @@ public class Activity_ListView extends AppCompatActivity{
 
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int pos, long rowid) {
-                //Toast.makeText(Activity_ListView.this, "pos: " + pos, Toast.LENGTH_SHORT).show();
-                Log.e("POS", Integer.toString(pos));
-                SORT = pos;
-                downloadJsonList();
+                if(!first) {
+                    //Toast.makeText(Activity_ListView.this, "pos: " + pos, Toast.LENGTH_SHORT).show();
+                    Log.e("POS", Integer.toString(pos));
+                    SORT = pos;
+                    downloadJsonList();
+
+                }
+                first = false;
 
             }
 
@@ -256,73 +267,14 @@ public class Activity_ListView extends AppCompatActivity{
     private void doReset() {
         SORT=0;
         downloadJsonList();
+        first = true;
     }
 
-    public class companyComparator implements Comparator<BikeData> {
 
-        @Override
-        public int compare(BikeData o1, BikeData o2) {
-            if(o1.Company.equals(o2.Company)){
-                return 0;
-            }
-            if(o1.Company.equals(null)){
-                return -1;
-            }
-            if(o2.Company.equals(null)){
-                return 1;
-            }
-            return o1.Company.compareTo(o2.Company);
-        }
-    };
 
-    public class modelComparator implements Comparator<BikeData> {
 
-        @Override
-        public int compare(BikeData o1, BikeData o2) {
-            if(o1.Model.equals(o2.Model)){
-                return 0;
-            }
-            if(o1.Model.equals(null)){
-                return -1;
-            }
-            if(o2.Model.equals(null)){
-                return 1;
-            }
-            return o1.Model.compareTo(o2.Model);
-        }
-    };
 
-    public class priceComparator implements Comparator<BikeData> {
 
-        @Override
-        public int compare(BikeData o1, BikeData o2) {
-            if(o1.Price==o2.Price){
-                return 0;
-            }
-            if(o1.Price.equals(null)){
-                return -1;
-            }
-            if(o2.Price.equals(null)){
-                return 1;
-            }
-            return (o1.Price>o2.Price ? -1 : (o1.Price==o2.Price ? 0 : 1));
-        }
-    };
 
-    public class locationComparator implements Comparator<BikeData> {
 
-        @Override
-        public int compare(BikeData o1, BikeData o2) {
-            if(o1.Location.equals(o2.Location)){
-                return 0;
-            }
-            if(o1.Location.equals(null)){
-                return -1;
-            }
-            if(o2.Location.equals(null)){
-                return 1;
-            }
-            return o1.Location.compareTo(o2.Location);
-        }
-    };
 }

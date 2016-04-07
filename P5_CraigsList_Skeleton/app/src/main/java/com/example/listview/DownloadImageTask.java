@@ -45,6 +45,7 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
 
         // site we want to connect to
         String url = params[0];
+
         Log.d(TAG, "URL is " + url);
 
         // note streams are left willy-nilly here because it declutters the
